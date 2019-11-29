@@ -27,8 +27,6 @@ public class AsciiCel {
         return this.options;
     }
     public AsciiCel(String data,HashMap<String,Integer> options) {
-        if(data.startsWith("+---"))
-            System.err.println("stop");
         this.options = new HashMap<String,Integer>(){{
             put("width", 100);
             put("padding-left", 1);
@@ -68,8 +66,6 @@ public class AsciiCel {
             this.data.add(lines[i]);
             if(this.width < length)
                 this.width = length;
-            if(this.width == 61)
-                System.out.println("stop");
         }
     }
     
@@ -94,20 +90,14 @@ public class AsciiCel {
     
     public void setWidth(int width){
         this.width = width;
-        if(this.width == 61)
-                System.out.println("stop");
     }
     
     public void increaseWidth(int width){
         this.width += width;
-        if(this.width == 61)
-                System.out.println("stop");
     }
     
     public void decreaseWidth(int width){
         this.width -= width;
-        if(this.width == 61)
-                System.out.println("stop");
     }
     
     public String[] getLines(){
@@ -148,8 +138,6 @@ public class AsciiCel {
             dataLen = this.data.get(i).length();
             if(this.width < dataLen)
                 this.width = dataLen;
-            if(this.width == 61)
-                System.out.println("stop");
         }
         
         this.top = "-".repeat(this.width);
@@ -192,9 +180,6 @@ public class AsciiCel {
         insertLineInTmp(data, tmp, sideString, extendFirstCharacter, false);
     }
     public void insertLineInTmp(String data, ArrayList<String> tmp, String sideString,boolean  extendFirstCharacter, boolean  extendRightCharacter){
-        if(data.equals("+--------+--------+")){
-            System.out.println("Stop");
-        }
         if(data.matches("\\n")){
             String[] split = data.split("\\n",-1);
             for(String extraRowData : split){
@@ -224,8 +209,6 @@ public class AsciiCel {
             this.width = len;
         else if(len < this.width)
             data += " ".repeat(this.width-len);
-        if(this.width == 61)
-                System.out.println("stop");
         
         tmp.add(sideString+paddingLeft+data+paddingRight+sideString);
         this.height++;

@@ -91,9 +91,6 @@ public class AsciiRow {
         for(int j=0;j<numberOfCels;j++){
             cel = this.cels.get(j);
             original = cel.getOriginalString();
-            if(original.equals("CCCCC\n22222")){
-                System.out.println("stop");
-            }
             numberOfLines = cel.getLines().length;
             if(numberOfLines < this.height){
                 this.cels.put(j, new AsciiCel(
