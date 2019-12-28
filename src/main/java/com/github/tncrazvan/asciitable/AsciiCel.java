@@ -28,7 +28,7 @@ public class AsciiCel {
     }
     public AsciiCel(String data,HashMap<String,Integer> options) {
         this.options = new HashMap<String,Integer>(){{
-            put("width", 100);
+            put("width", 1024);
             put("padding-left", 1);
             put("padding-right", 1);
             put("padding-top", 0);
