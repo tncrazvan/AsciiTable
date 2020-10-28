@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sat Dec 28 16:25:03 CET 2019
+AsciiTable-1.0.0.pom>=
+AsciiTable-1.0.0.jar>com.github.tncrazvan.AsciiTable=
+AsciiTable-1.0.0.jar>=
+AsciiTable-1.0.0.pom>com.github.tncrazvan.AsciiTable=
